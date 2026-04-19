@@ -1,4 +1,9 @@
-/* ===== NAVBAR ===== */
+
+/* ====================== Gobal============================== */
+body {
+  font-family: 'Inter', sans-serif;
+
+}/* ===== NAVBAR ===== */
 
 .navbar {
   background: #ffffff;
@@ -131,7 +136,129 @@
   justify-content: flex-end;
 }
 
-/* ====================== Gobal============================== */
-body {
-  font-family: 'Inter', sans-serif;
+
+
+/* =========================== USUARIOS ======================== */
+
+.usuarios-container {
+  padding: 30px;
+}
+
+/* header */
+.usuarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.usuarios-header h1 {
+  color: #112945;
+}
+
+/* filtros */
+.usuarios-filtros {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+
+}
+.usuarios-filtros h4 {
+  color: #112945;
+}
+.usuarios-filtros input,
+.usuarios-filtros select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* tabla */
+.usuarios-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.usuarios-tabla th {
+  background: #112945;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.usuarios-tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* estados */
+.activo {
+  color: green;
+  font-weight: bold;
+}
+
+.inactivo {
+  color: red;
+  font-weight: bold;
+}
+
+/* botones */
+.btn-secundario {
+  background: #BEBEBE;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secundario:hover {
+  background: #a0a0a0;
+}
+
+/* ============================= MODAL ============================ */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.modal h2 {
+  color: #112945;
+  margin-bottom: 10px;
+}
+
+.modal input,
+.modal select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
 }
