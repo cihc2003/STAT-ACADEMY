@@ -135,8 +135,63 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+/* ============================= Blog Detalle ============================ */
+.detalle-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
+.detalle-hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
+.detalle-hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.detalle-subtitle {
+  color: gray;
+  font-size: 16px;
+}
+
+.detalle-image-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.detalle-image {
+  width: 70%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 20px auto;
+}
+
+.detalle-content {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.detalle-content blockquote {
+  margin: 20px 0;
+  padding: 15px;
+  border-left: 4px solid #007bff;
+  background: #f4f8ff;
+  font-style: italic;
+}
+
+.detalle-footer {
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  color: gray;
+  font-size: 14px;
+}
 
 /* =========================== USUARIOS ======================== */
 

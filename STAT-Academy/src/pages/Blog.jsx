@@ -1,14 +1,51 @@
 import Layout from "../components/Layout";
 import "../App.css";
+import { useState } from "react";
 import img1 from "../assets/corazon.jpg";
 import img2 from "../assets/Salud_preventiva.jpg";
 import img3 from "../assets/Tecnologia_medica.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Blog() {
+
+const navigate = useNavigate();
+const [mostrarModal, setMostrarModal] = useState(false);
+
+const [nuevoPost, setNuevoPost] = useState({
+  titulo: "",
+  descripcion: "",
+  imagen: ""
+});
+
+const handleChange = (e) => {
+  setNuevoPost({
+    ...nuevoPost,
+    [e.target.name]: e.target.value
+  });
+};
+
+const agregarPost = () => {
+  console.log(nuevoPost);
+  setMostrarModal(false);
+  setNuevoPost({ titulo: "", descripcion: "", imagen: "" });
+};
+
   return (
      <Layout>
     <div className="blog-container">
+      <div className="blog-header">
+
+
+ 
+</div>
       <h1 className="blog-title">Blog</h1>
+
+ <button
+    className="btn-primary"
+    onClick={() => setMostrarModal(true)}
+  >
+    + Nuevo post
+  </button>
 
       <div className="blog-list">
 
@@ -24,7 +61,12 @@ function Blog() {
           </p>
           <img src={img1} alt="Cardiología" className="blog-image" />
           <div className="card-footer">
-  <button className="btn-primary">Leer más</button>
+          <button
+            className="btn-primary"
+            onClick={() => navigate("/blog/1")}
+          >
+            Leer más
+          </button>
           </div>
         </div>
 
@@ -39,7 +81,12 @@ function Blog() {
           </p>
           <img src={img2} alt="Tech" className="blog-image" />
             <div className="card-footer">
-              <button className="btn-primary">Leer más</button>
+               <button
+                className="btn-primary"
+                onClick={() => navigate("/blog/1")}
+              >
+                Leer más
+              </button>
             </div>
         </div>
 
@@ -54,12 +101,58 @@ function Blog() {
           </p>
           <img src={img3} alt="prev" className="blog-image" />
             <div className="card-footer">
-            <button className="btn-primary">Leer más</button>
+            <button
+              className="btn-primary"
+              onClick={() => navigate("/blog/1")}
+            >
+              Leer más
+            </button>
             </div>
         </div>
 
       </div>
     </div>
+
+    {mostrarModal && (
+  <div className="modal-overlay">
+    <div className="modal">
+      <h2>Nuevo Post</h2>
+
+      <input
+        type="text"
+        name="titulo"
+        placeholder="Título"
+        value={nuevoPost.titulo}
+        onChange={handleChange}
+      />
+
+      <textarea
+        name="descripcion"
+        placeholder="Descripción"
+        value={nuevoPost.descripcion}
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="imagen"
+        placeholder="URL de imagen"
+        value={nuevoPost.imagen}
+        onChange={handleChange}
+      />
+
+      <div className="modal-actions">
+        <button className= "btn-secundario" onClick={() => setMostrarModal(false)}>
+          Cancelar
+        </button>
+
+        <button className="btn-primary" onClick={agregarPost}>
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+)}
     </Layout>
   );
 }
