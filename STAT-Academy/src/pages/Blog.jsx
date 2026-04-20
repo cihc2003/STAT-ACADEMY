@@ -40,8 +40,8 @@ const agregarPost = () => {
 </div>
       <h1 className="blog-title">Blog</h1>
 
- <button
-    className="btn-primary"
+ <button 
+    className="btn-primary btn-center"
     onClick={() => setMostrarModal(true)}
   >
     + Nuevo post

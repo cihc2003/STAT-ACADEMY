@@ -2,9 +2,20 @@
 /* ====================== Gobal============================== */
 body {
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-}/* ===== NAVBAR ===== */
+h1 {
+  color: #112945;
+}
 
+a {
+  text-decoration: underline;
+  color: #AE040F;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
   background: #ffffff;
   padding: 15px 40px;
@@ -25,14 +36,13 @@ body {
 /* logo */
 .navbar-logo {
   width: 120px;
-
   object-fit: contain;
 }
 
 /* texto */
 .navbar-title {
-    color: #112945;
-  font-size: 20px;
+  color: #112945;
+  font-size: 30px;
   font-weight: bold;
   font-weight: 700;
 }
@@ -44,7 +54,7 @@ body {
 }
 
 .navbar-link {
-    color: #112945;
+  color: #112945;
   text-decoration: none;
   font-size: 15px;
   transition: opacity 0.2s;
@@ -58,7 +68,7 @@ body {
 /* ====================== BLOG ============================== */
 
 .blog-container {
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .blog-title {
@@ -135,6 +145,12 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
+.btn-center {
+  display: block;
+  margin: 20px auto;
+}
+
 /* ============================= Blog Detalle ============================ */
 .detalle-container {
   max-width: 900px;
@@ -316,4 +332,66 @@ body {
   justify-content: flex-end;
   gap: 10px;
   margin-top: 10px;
+}
+
+/* ============================= FOOTER ============================ */
+.footer {
+  background-color: #112945;
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 50px; 
+}
+
+.footer-socials svg {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.footer-socials svg:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+/* ============================= SWIPER ============================ */
+
+.swiper {
+  width: 80%;
+  height: 650px; 
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================= INICIO ============================ */
+
+.inicio-card {
+  width: 90%;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  justify-self: center;
+}
+
+.inicio-card:hover {
+  transform: translateY(-5px);
 }
