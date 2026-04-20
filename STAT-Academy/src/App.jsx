@@ -8,6 +8,7 @@ import Blog from "./pages/Blog";
 import Proveedores from "./pages/Proveedores";
 import Usuarios from "./pages/Usuarios";
 import BlogDetalle from "./pages/BlogDetalle";
+import Perfil from "./pages/Perfil";
 
 
 import Productos from "./pages/Productos";
@@ -27,6 +28,7 @@ function App() {
       {/* 🔹 GENERALES */}
       <Route path="/" element={<Inicio />} />
       <Route path="/cerrar-sesion" element={<Inicio />} />
+      <Route path="/perfil" element={<Perfil />} />
 
       {/* 🔹 AUTENTICACIÓN */}
       <Route path="/login" element={<Login />} />

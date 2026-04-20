@@ -510,3 +510,55 @@ a {
   text-align: center;
   font-size: 14px;
 }
+
+/* ============================= PERFIL ============================ */
+
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.perfil-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+}
+
+.perfil-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.perfil-field label {
+  font-weight: 600;
+  color: #112945;
+}
+
+.perfil-field p {
+  margin: 0;
+  color: #333;
+}
+
+.perfil-field input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+  gap: 15px;
+}
