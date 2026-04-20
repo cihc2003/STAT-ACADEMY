@@ -1,8 +1,26 @@
 import Layout from "../components/Layout";
+import { useNavigate } from "react-router-dom";
 
-function Pago({ carrito }) {
+function Pago({ carrito, setCarrito, facturas, setFacturas }) {
+
+  const navigate = useNavigate();
 
   const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+
+  const confirmarPago = () => {
+
+    const nuevaFactura = {
+      id: Date.now(),
+      total: total,
+      fecha: new Date().toLocaleDateString(),
+      estado: "Pagado"
+    };
+
+    setFacturas([...facturas, nuevaFactura]);
+    setCarrito([]);
+
+    navigate("/facturas");
+  };
 
   return (
     <Layout>
@@ -14,7 +32,6 @@ function Pago({ carrito }) {
 
         <h3>Total a pagar: ${total}</h3>
 
-        
         <div className="usuarios-filtros">
           <h3>Datos del cliente</h3>
 
@@ -23,7 +40,6 @@ function Pago({ carrito }) {
           <input type="text" placeholder="Teléfono" />
         </div>
 
-       
         <div className="usuarios-filtros">
           <h3>Información de pago</h3>
 
@@ -43,7 +59,6 @@ function Pago({ carrito }) {
           </select>
         </div>
 
-       
         <div className="usuarios-filtros">
           <h3>Resumen</h3>
 
@@ -56,9 +71,8 @@ function Pago({ carrito }) {
           <h2>Total: ${total}</h2>
         </div>
 
-        
         <div style={{ marginTop: "20px" }}>
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={confirmarPago}>
             Confirmar pago
           </button>
         </div>
