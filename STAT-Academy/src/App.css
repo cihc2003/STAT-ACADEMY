@@ -6,6 +6,10 @@ body {
   padding: 0;
 }
 
+h1 {
+  color: #112945;
+}
+
 a {
   text-decoration: underline;
   color: #AE040F;
@@ -64,7 +68,7 @@ a {
 /* ====================== BLOG ============================== */
 
 .blog-container {
-  padding: 40px 20px;
+  padding: 10px 20px;
 }
 
 .blog-title {
@@ -357,3 +361,37 @@ a {
   opacity: 0.7;
 }
 
+/* ============================= SWIPER ============================ */
+
+.swiper {
+  width: 80%;
+  height: 650px; 
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================= INICIO ============================ */
+
+.inicio-card {
+  width: 90%;
+  background: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  justify-self: center;
+}
+
+.inicio-card:hover {
+  transform: translateY(-5px);
+}
