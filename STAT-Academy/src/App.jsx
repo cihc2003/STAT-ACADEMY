@@ -13,6 +13,7 @@ import Facturas from "./pages/Facturas";
 function App() {
 
   const [carrito, setCarrito] = useState([]);
+  const [facturas, setFacturas] = useState([]);
 
   return (
     <Routes>
@@ -22,7 +23,6 @@ function App() {
       <Route path="/proveedores" element={<Proveedores />} />
       <Route path="/usuarios" element={<Usuarios />} />
 
-      {/* 👇 IMPORTANTE */}
       <Route path="/productos" element={
         <Productos carrito={carrito} setCarrito={setCarrito} />
       } />
@@ -32,10 +32,17 @@ function App() {
       } />
 
       <Route path="/pago" element={
-        <Pago carrito={carrito} />
+        <Pago
+          carrito={carrito}
+          setCarrito={setCarrito}
+          facturas={facturas}
+          setFacturas={setFacturas}
+        />
       } />
 
-      <Route path="/facturas" element={<Facturas />} />
+      <Route path="/facturas" element={
+        <Facturas facturas={facturas} />
+      } />
     </Routes>
   );
 }
