@@ -15,6 +15,12 @@ a {
   color: #AE040F;
 }
 
+.error-text {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
 /* ===== NAVBAR ===== */
 .navbar {
   background: #ffffff;
@@ -63,6 +69,49 @@ a {
 
 .navbar-link:hover {
   opacity: 0.7;
+}
+
+.profile-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: #112945;
+  transition: transform 0.2s;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* dropdown */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.dropdown a {
+  padding: 12px;
+  text-decoration: none;
+  color: #112945;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown a:hover {
+  background: #f5f5f5;
 }
 
 /* ====================== BLOG ============================== */
@@ -394,4 +443,70 @@ a {
 
 .inicio-card:hover {
   transform: translateY(-5px);
+}
+
+/* ============================= LOGIN ============================ */
+/* CONTENEDOR */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.login-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  width: 100%;
+}
+
+/* INPUTS */
+.login-card input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* LINKS */
+.login-links {
+  text-align: right;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-links a {
+  color: #112945;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* BOTONES */
+.login-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* REGISTRO */
+.login-register {
+  text-align: center;
+  font-size: 14px;
 }
